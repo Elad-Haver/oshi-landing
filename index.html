@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>המועדון של אושי אושי גבעת שמואל</title>
+<meta name="description" content="הצטרפו למועדון של אושי אושי גבעת שמואל. סושי, מטבח אסייתי ואווירה שעושה חשק להישאר.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="המועדון של אושי אושי גבעת שמואל">
+<meta property="og:description" content="הצטרפו למועדון הלקוחות של אושי אושי גבעת שמואל ותיהנו מהטבות בלעדיות לחברי המועדון.">
+<meta property="og:image" content="https://oshi-oshi-givat-shmuel.vercel.app/assets/img/gallery-4-600.jpg">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#join-form">דלגו לטופס ההצטרפות</a>
+
+<div id="demo-banner" class="demo-banner" role="status" hidden>
+  <strong>מצב הדגמה.</strong> הטופס עוד לא מחובר למערכת המועדון, ופרטים שיוזנו לא יישמרו.
+</div>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#top" aria-label="אושי אושי גבעת שמואל">
+      <!-- לוגו מקורי (גרסה לרקע כהה מתוך קובץ הלוגו). assets/logo.svg הוא הווקטור המקורי, logo.png הוא גרסה קלה לרשת. -->
+      <span class="slot slot--logo" data-slot="logo">
+        <img class="brand__logo" src="assets/logo.png" alt="אושי אושי Sushi &amp; Bar" width="720" height="203" decoding="async">
+        <span class="slot__label" aria-hidden="true">לוגו</span>
+      </span>
+      <span class="brand__branch">גבעת שמואל</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero__intro">
+      <h1 id="hero-title" class="display">מועדון הלקוחות שלנו</h1>
+      <p class="lead">ברוכים הבאים למועדון הלקוחות של אושי אושי גבעת שמואל!<br>הצטרפו למועדון ותיהנו מהטבות בלעדיות לחברי המועדון.</p>
+      <!-- הטבות המועדון. הנוסח נערך ב־config.js (benefits). -->
+      <ul id="benefits" class="benefits" aria-label="הטבות המועדון" hidden></ul>
+    </div>
+
+    <figure class="hero__media">
+      <!-- מקום לצילום הסניף: להניח את הקובץ ב־assets/img/branch.jpg (מומלץ 1600×1200, עד ~250KB). התמונה תופיע אוטומטית. -->
+      <span class="slot slot--photo" data-slot="branch">
+        <img src="assets/img/branch.jpg" alt="אושי אושי גבעת שמואל" width="1600" height="1200" fetchpriority="high" decoding="async">
+        <span class="slot__label" aria-hidden="true">כאן תיכנס תמונה של הסניף</span>
+      </span>
+    </figure>
+
+    <div class="hero__form">
+      <form id="join-form" class="card" novalidate aria-labelledby="form-title">
+        <h2 id="form-title" class="card__title">מצטרפים למועדון</h2>
+        <p class="card__hint">כל השדות חובה.</p>
+
+        <div class="field">
+          <label for="fullName">שם מלא</label>
+          <input id="fullName" name="fullName" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="fullName-err">
+          <p class="field__err" id="fullName-err" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="phone">מספר טלפון</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="050-0000000" required maxlength="20" aria-describedby="phone-err">
+          <p class="field__err" id="phone-err" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">כתובת מייל</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" dir="ltr" placeholder="name@example.com" required maxlength="120" autocapitalize="off" spellcheck="false" aria-describedby="email-err">
+          <p class="field__err" id="email-err" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field field--date" aria-describedby="birth-err">
+          <legend>תאריך לידה</legend>
+          <div class="date">
+            <div class="date__part">
+              <label for="bday-d" class="sub">יום</label>
+              <select id="bday-d" name="bdayDay" autocomplete="bday-day" required><option value="">יום</option></select>
+            </div>
+            <div class="date__part date__part--month">
+              <label for="bday-m" class="sub">חודש</label>
+              <select id="bday-m" name="bdayMonth" autocomplete="bday-month" required><option value="">חודש</option></select>
+            </div>
+            <div class="date__part">
+              <label for="bday-y" class="sub">שנה</label>
+              <select id="bday-y" name="bdayYear" autocomplete="bday-year" required><option value="">שנה</option></select>
+            </div>
+          </div>
+          <p class="field__err" id="birth-err" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="consent">
+          <input id="consent" name="marketingConsent" type="checkbox" aria-describedby="consent-err">
+          <label for="consent"><span id="consent-text"></span></label>
+          <p class="field__err" id="consent-err" aria-live="polite"></p>
+        </div>
+
+        <!-- שדה מלכודת לבוטים. מוסתר מאנשים ומקוראי מסך. -->
+        <div class="hp" aria-hidden="true">
+          <label for="company">לא למלא</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button id="submit" class="btn" type="submit">
+          <span class="btn__label">צרפו אותי למועדון</span>
+          <span class="btn__spinner" aria-hidden="true"></span>
+        </button>
+
+        <p id="legal-line" class="legal" hidden></p>
+        <div id="form-msg" class="form-msg" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </form>
+
+      <div id="success" class="card success" tabindex="-1" hidden>
+        <h2 class="card__title">ברוכים הבאים למועדון</h2>
+        <p class="success__text">ההרשמה נשמרה. נתראה אצלנו בגבעת שמואל.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="club wrap" aria-labelledby="club-title">
+    <div class="club__text">
+      <h2 id="club-title" class="section-title">המועדון של הסניף</h2>
+      <p>המועדון הוא הקשר הישיר שלכם עם אושי אושי גבעת שמואל. מצטרפים פעם אחת, ונשארים מעודכנים במה שקורה אצלנו.</p>
+    </div>
+  </section>
+
+  <section class="gallery wrap" aria-label="מהסניף ומהמטבח">
+    <!-- צילומי מנות של אושי אושי -->
+    <figure class="gallery__item">
+      <span class="slot slot--photo" data-slot="gallery-1">
+        <picture>
+          <source type="image/webp" srcset="assets/img/gallery-1-600.webp 600w, assets/img/gallery-1.webp 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw">
+          <img src="assets/img/gallery-1.jpg" srcset="assets/img/gallery-1-600.jpg 600w, assets/img/gallery-1.jpg 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw" alt="מגדל רולים בהגשה של אושי אושי, רול עליון מורם במקלות" width="900" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <span class="slot__label" aria-hidden="true">צילום</span>
+      </span>
+    </figure>
+    <figure class="gallery__item">
+      <span class="slot slot--photo" data-slot="gallery-2">
+        <picture>
+          <source type="image/webp" srcset="assets/img/gallery-2-600.webp 600w, assets/img/gallery-2.webp 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw">
+          <img src="assets/img/gallery-2.jpg" srcset="assets/img/gallery-2-600.jpg 600w, assets/img/gallery-2.jpg 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw" alt="כיסונים בארבעה צבעים על עלה בננה עם רוטב סויה" width="900" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <span class="slot__label" aria-hidden="true">צילום</span>
+      </span>
+    </figure>
+    <figure class="gallery__item">
+      <span class="slot slot--photo" data-slot="gallery-3">
+        <picture>
+          <source type="image/webp" srcset="assets/img/gallery-3-600.webp 600w, assets/img/gallery-3.webp 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw">
+          <img src="assets/img/gallery-3.jpg" srcset="assets/img/gallery-3-600.jpg 600w, assets/img/gallery-3.jpg 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw" alt="רול סלמון עטוף אבוקדו עם ביצי סלמון, מורם במקלות" width="900" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <span class="slot__label" aria-hidden="true">צילום</span>
+      </span>
+    </figure>
+    <figure class="gallery__item">
+      <span class="slot slot--photo" data-slot="gallery-4">
+        <picture>
+          <source type="image/webp" srcset="assets/img/gallery-4-600.webp 600w, assets/img/gallery-4.webp 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw">
+          <img src="assets/img/gallery-4.jpg" srcset="assets/img/gallery-4-600.jpg 600w, assets/img/gallery-4.jpg 900w" sizes="(min-width: 960px) 290px, (min-width: 600px) 25vw, 50vw" alt="ערימת רולי סלמון ואבוקדו, רול עליון מורם במקלות" width="900" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <span class="slot__label" aria-hidden="true">צילום</span>
+      </span>
+    </figure>
+  </section>
+
+  <div class="wrap again">
+    <a class="btn btn--ghost" href="#join-form">מצטרפים למועדון</a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <img class="footer__logo" src="assets/logo.png" alt="אושי אושי Sushi &amp; Bar" width="720" height="203" loading="lazy" decoding="async">
+    <p class="footer__name">גבעת שמואל</p>
+    <ul id="branch-info" class="footer__info" hidden></ul>
+    <nav id="footer-links" class="footer__links" aria-label="מסמכים" hidden></nav>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>
